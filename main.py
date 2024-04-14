@@ -1,5 +1,4 @@
 from urllib.parse import urlparse
-
 import requests
 from dotenv import load_dotenv
 import os
@@ -29,6 +28,7 @@ def is_bitlink(bitlink, secret):
     headers = {"Authorization": f"Bearer {secret}"}
     response = requests.get(url, headers=headers)
     return response.ok
+
 
 def main():
     load_dotenv()
